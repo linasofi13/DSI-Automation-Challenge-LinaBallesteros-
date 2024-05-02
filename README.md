@@ -13,7 +13,13 @@ For this project, a simulated form has been implemented in the medical records o
 The information to complete the form is obtained from a file called "patients.txt", which contains the information to fill the fields. However, the "Birthplace" and "Blood Type" fields are not present in this file. To obtain this data, the program reads images using the Pytesseract library. Then, using PyAutoGUI commands, the requested fields are completed, carrying out several processes to analyze this information. By using FastApi endpoints, it is possible to perform mouse movements and extract text from images with POST requests.
 
 Below, the operation of the project is detailed more precisely.
+## Demo
 
+https://github.com/linasofi13/DSI-Automation-Challenge-LinaBallesteros-/assets/140737132/0b7fbd16-44c0-45fc-99e1-6e10b8f6236f
+
+### Full Demo
+
+See Full Demo [here](https://youtu.be/aE_iiBIizqs).
 ###  :file_folder: File Structure
 The structure and directories of the project are presented in this section:
 
@@ -189,4 +195,4 @@ Again, the clarification is made that loading times may vary depending on the ma
 - [Lina Ballesteros](https://github.com/linasofi13) is the author of the developed solution.
   
 ##  :lock: License
-Add a license here, or a link to it.
+Licence
