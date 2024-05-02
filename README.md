@@ -8,7 +8,7 @@ DSI technical challenge.  Process automation, optical character processing (OCR)
 This project is a proposed solution to the technical challenge proposed by the company Design Systems Inno (DSI), which seeks to develop an integrated system that automates the extraction of textual information of documents on a local computer and execute actions based on that information through an API.
 
 ##  :paperclip: Implementation
-For this project, a simulated form has been implemented in the medical records of a medical clinic. The Django framework has been used to develop a template for this form, taking advantage of visual tools such as Bootstrap. Additionally, a model called "Patient" has been configured to store each added item in the Django database PostgreSQL. 
+For this project, a simulated form has been implemented in the medical records of a medical clinic. The Django framework has been used to develop a template for this form, taking advantage of visual tools such as Bootstrap. Additionally, a model called ["Patient"](https://github.com/linasofi13/DSI-Automation-Challenge-LinaBallesteros-/blob/main/medical_form/medical_records/models.py) has been configured to store each added item in the Django database PostgreSQL. 
 
 The information to complete the form is obtained from a file called "patients.txt", which contains the information to fill the fields. However, the "Birthplace" and "Blood Type" fields are not present in this file. To obtain this data, the program reads images using the Pytesseract library. Then, using PyAutoGUI commands, the requested fields are completed, carrying out several processes to analyze this information. By using FastApi endpoints, it is possible to perform mouse movements and extract text from images with POST requests.
 
@@ -76,7 +76,7 @@ Follow these instructions to run the program in your machine.
       pip install -r requirements.txt
     ```
 5. Install the [Google Tesseract OCR](https://github.com/tesseract-ocr/tesseract). For Windows users, it is essential to install the Tesseract OCR, you can install it [here](https://github.com/UB-Mannheim/tesseract/wiki) and find more information about this library in the official [docs](https://pypi.org/project/pytesseract/).
-6. After installing the Tesseract OCR, you need to manually change the path of your tesseract.exe file by going to the [api_automation.py]() file that includes the path to the executable file, as shown here:
+6. After installing the Tesseract OCR, you need to manually change the path of your tesseract.exe file by going to the [api_automation.py](https://github.com/linasofi13/DSI-Automation-Challenge-LinaBallesteros-/blob/main/medical_form/medical_records/api_automation.py) file and the [rpa_functions.py](https://github.com/linasofi13/DSI-Automation-Challenge-LinaBallesteros-/blob/main/medical_form/medical_records/rpa_functions.py) file that include the path to the executable file, as shown here:
     ```bash
       pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
     ```
@@ -152,7 +152,7 @@ It is important to highlight that the use of the PyAutoGUI library can be comple
 
 As mentioned before, this project has a base made with the Django framework to facilitate the view of the form. To do this, an application called 'medical_records' was created, which stores the files necessary to execute the form template, such as the views.py file and the urls.py file. The urls.py file specifies the routes that allow you to start the automation and register the data of each patient in the model.
 
-The data that is read is taken from a file called 'patients.txt' that looks like this:
+The data that is read is taken from a file called 'patients.txt', it contains the data of 8 patients and looks like this: 
 
 ```bash
    Name;Id Number;Date of Birth;Birthplace;Gender;Occupation;Marital Status;Phone Number;Emergency Contact;Allergies;Blood Type;Past Surgeries
