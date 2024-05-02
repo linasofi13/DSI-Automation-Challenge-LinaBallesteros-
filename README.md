@@ -195,4 +195,4 @@ Again, the clarification is made that loading times may vary depending on the ma
 - [Lina Ballesteros](https://github.com/linasofi13) is the author of the developed solution.
   
 ##  :lock: License
-Licence
+Distributed under the MIT License. 
