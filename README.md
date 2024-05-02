@@ -7,7 +7,7 @@ DSI technical challenge.  Process automation, optical character processing (OCR)
 ##  :beginner: About
 This project is a proposed solution to the technical challenge proposed by the company Design Systems Inno (DSI), which seeks to develop an integrated system that automates the extraction of textual information of documents on a local computer and execute actions based on that information through an API.
 
-##  :beginner: Implementation
+##  :paperclip: Implementation
 For this project, a simulated form has been implemented in the medical records of a medical clinic. The Django framework has been used to develop a template for this form, taking advantage of visual tools such as Bootstrap. Additionally, a model called "Patient" has been configured to store each added item in the Django database PostgreSQL. 
 
 The information to complete the form is obtained from a file called "patients.txt", which contains the information to fill the fields. However, the "Birthplace" and "Blood Type" fields are not present in this file. To obtain this data, the program reads images using the Pytesseract library. Then, using PyAutoGUI commands, the requested fields are completed, carrying out several processes to analyze this information. By using FastApi endpoints, it is possible to perform mouse movements and extract text from images with POST requests.
