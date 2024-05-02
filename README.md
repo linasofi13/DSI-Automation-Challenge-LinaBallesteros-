@@ -134,7 +134,7 @@ It is important to highlight that the use of the PyAutoGUI library can be comple
    
 ![image](https://github.com/linasofi13/DSI-Automation-Challenge-LinaBallesteros-/assets/140737132/05bb29c7-18db-490b-b7ee-3d1c647993af)
 
-:warning: **Warning:** Once the automation starts, do not move the mouse or use your computer keyboard. If you want to stop the process at any point, you just have to bring your mouse to the upper left corner of the screen, which will activate pyautogui's fail safe that stops any process that is being carried out. It is recommended to [review this functionality](https://youtu.be/eAIJ-hYzYeo?si=O6wUIf45tx9UuoL4) in case you have never worked with PyAutoGUI. If you trigger this option, you will see the following custom HttpResponse caught as an Exception (you could also see this screen if any error occur executing the program):
+:warning: **Warning:** Once the automation starts, do not move the mouse or use your computer keyboard. If you want to stop the process at any point, you just have to bring your mouse to the upper left corner of the screen, which will activate pyautogui's fail safe that stops any process that is being carried out. It is recommended to [review this functionality](https://youtu.be/eAIJ-hYzYeo?si=O6wUIf45tx9UuoL4) in case you have never worked with PyAutoGUI. If you trigger this option, you will see the following custom HttpResponse caught as an Exception (you could also see this screen if any error occurs while executing the program):
 
 ![image](https://github.com/linasofi13/DSI-Automation-Challenge-LinaBallesteros-/assets/103126242/c880d37c-44a4-46f0-8204-ad25e1f0647b)
 
