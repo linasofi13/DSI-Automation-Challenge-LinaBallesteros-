@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical History</title>
+    <link rel="icon" href="/static/imgs/clinic_logo.png" type="image/x-icon" onclick="return false;">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand">
+                    <img src="/static/imgs/clinic_logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-top" loading="lazy">
+                    Medical Clinic
+                </a>
+                <form id="autoFillForm" method="post" action="{% url 'auto_fill_data_view' %}"> 
+                    {% csrf_token %}
+                    <input type="hidden" id="autoFillInput" name="auto_fill_data">
+                    <button class="btn btn-outline-success ml-auto" type="submit">Autofill</button>
+                </form>                
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h1 class="mt-5">Patient's Medical History</h1>
+        
+        <form id="medicalForm" method="post" action="{% url 'add_patient_data_view' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label><strong>Name:</strong></label>
+                <input type="text" class="form-control" id="patient_name" name="patient_name" placeholder="Enter name" required>
+            </div>
+            <div class="form-group">
+                <label><strong>ID Number:</strong></label>
+                <input type="text" class="form-control" id="id_number" name="id_number" placeholder="Enter ID number" required>
+            </div>
+            <div class="form-group">
+                <label><strong>Date of Birth:</strong></label>
+                <input type="date" class="form-control" id="date_of_birth" name="date_of_birth" required>
+            </div>
+            <div class="form-group">
+                <label><strong>Birthplace:</strong></label>
+                <input type="text" class="form-control" id="birthplace" name="birthplace" placeholder="Enter birthplace" required>
+            </div>
+            <div class="form-group">
+                <label><strong>Gender:</strong></label>
+                <select class="form-control" id="gender" name="gender" required>
+                    <option value="" disabled selected>Choose Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>            
+            <div class="form-group">
+                <label><strong>Occupation:</strong></label>
+                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="Enter occupation" required>
+            </div>            
+            <div class="form-group">
+                <label><strong>Marital Status:</strong></label><br>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" value="single" id="single" name="marital_status">
+                    <label class="form-check-label" for="single">Single</label>
+                </div>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" value="married" id="married" name="marital_status">
+                    <label class="form-check-label" for="married">Married</label>
+                </div>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" value="divorced" id="divorced" name="marital_status">
+                    <label class="form-check-label" for="divorced">Divorced</label>
+                </div>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" value="widowed" id="widowed" name="marital_status">
+                    <label class="form-check-label" for="widowed">Widowed</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label><strong>Phone Number:</strong></label>
+                <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Enter phone number" required>
+            </div>
+            <div class="form-group">
+                <label><strong>Emergency Contact:</strong></label>
+                <input type="text" class="form-control" id="emergency_contact" name="emergency_contact" placeholder="Enter emergency contact" required>
+            </div>
+            <div class="form-group">
+                <label><strong>Allergies:</strong></label>
+                <textarea class="form-control" id="allergies" name="allergies" rows="3" placeholder="Enter allergies" required></textarea>
+            </div>
+            <div class="form-group">
+                <label><strong>Blood Type:</strong></label>
+                <input type="text" class="form-control" id="blood_type" name="blood_type" placeholder="Enter blood type" required>
+            </div>
+            <div class="form-group">
+                <label><strong>Past Surgeries:</strong></label>
+                <textarea class="form-control" id="past_surgeries" name="past_surgeries" rows="3" placeholder="Enter past surgeries" required></textarea>
+            </div>
+            <button id="postButton" type="submit" class="btn btn-primary">Submit</button>
+            
+        </form>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

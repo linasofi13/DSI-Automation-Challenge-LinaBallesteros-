@@ -1,0 +1,32 @@
+{
+  "fields": [
+    {
+      "name": "﻿REGION",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "CODIGO DANE DEL DEPARTAMENTO",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "DEPARTAMENTO",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "CODIGO DANE DEL MUNICIPIO",
+      "type": "number",
+      "format": "default"
+    },
+    {
+      "name": "MUNICIPIO",
+      "type": "string",
+      "format": "default"
+    }
+  ],
+  "missingValues": [
+    ""
+  ]
+}

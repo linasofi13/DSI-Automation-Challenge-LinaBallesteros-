@@ -1,0 +1,9 @@
+Name;Id Number;Date of Birth;Birthplace;Gender;Occupation;Marital Status;Phone Number;Emergency Contact;Allergies;Blood Type;Past Surgeries
+"Maria Fernandez;1452485698;20/03/1990; ;Female;Lawyer;Single;3123456789;3134567890;None; ;None"
+"Laura Gomez;9876543210;05/12/1988; ;Female;Doctor;Single;3219876543;3158765432;Peanuts; ;Tonsillectomy"
+"Carlos Rodriguez;1234567890;10/08/1975; ;Male;Engineer;Married;3009876543;3101234567;Shellfish; ;Appendectomy"
+"Ana Lopez;9876543210;05/12/1988; ;Female;Teacher;Single;3109876543;3201234567;Peanuts; ;None"
+"Carlos Ramirez;1234567890;10/08/1975; ;Male;Engineer;Married;3009876543;3156543210;None; ;Appendectomy"
+"Juan Perez;1234567890;10/08/1975; ;Male;Engineer;Married;3209876543;3187654321;None; ;Appendectomy"
+"Luisa Rodriguez;9876543210;05/12/1988; ;Female;Doctor;Single;3156789012;3012345678;None; ;None"
+"Miguel Sanchez;1234567890;10/08/1975; ;Male;Engineer;Married;3109876543;3214568541;None; ;Appendectomy"
